@@ -602,7 +602,7 @@ function breakfast()
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
-            lunch nexus_$target-$variant
+            lunch nitrogen_$target-$variant
         fi
     fi
     return $?
