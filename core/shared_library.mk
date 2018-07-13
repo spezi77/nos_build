@@ -21,7 +21,6 @@ endif
 endif
 endif # my_module_multilib == both
 
-
 LOCAL_2ND_ARCH_VAR_PREFIX :=
 include $(BUILD_SYSTEM)/module_arch_supported.mk
 
@@ -48,6 +47,12 @@ endif
 LOCAL_2ND_ARCH_VAR_PREFIX :=
 
 endif # TARGET_2ND_ARCH
+
+ifeq ($(SDCLANG), true)
+ifeq ($(LOCAL_SDCLANG_LTO), true)
+include $(SDCLANG_LTO_DEFS)
+endif
+endif
 
 my_module_arch_supported :=
 
